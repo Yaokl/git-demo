@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>七尾</title>
+
+    <link rel="stylesheet" href="../Home_page.css">
+    <link rel="stylesheet" href="../download/font_lk8imr1od1f/iconfont.css">
+
+    <script src="../layui-v2.6.8/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="../layui-v2.6.8/layui/css/layui.css">
+    <link rel="stylesheet" href="./physical examination.css">
+    <link rel="stylesheet" href="../tubiao/download/font_lr057j4a8g9/iconfont.css">
+</head>
+
+<body>
+    <div id="frame">
+        <!-- 顶部导航栏 -->
+        <div id="navigation">
+            <div class="navigation_1">
+                <div class="navigation-div"><img src="../img/HeadPortrait-u4823.svg" alt=""
+                        style="width: 23px;height: 23px;"></div>
+                <span class="navigation-span">Sam</span>
+                <span class="iconfont">&#xe656;</span>
+                <div id="navigation_1-set" >
+                    <div class="navigation_1-set"><span><a>修改密码</a></span></div>
+                    <div class="navigation_1-set"><span><a>退出</a></span></div>
+                </div>
+            </div>
+        </div>
+        <!-- 左侧导航栏 -->
+        <div id="sidebar">
+            <div class="sidebar-div1">
+                <div class="sidebar-div1-logo">logo</div>
+                <span>七尾医疗服务后台</span>
+            </div>
+            <ul class="layui-nav layui-nav-tree" lay-filter="test"
+                style="width: 240px;height: 200px;margin-top: 30px;background-color: rgb(25, 124, 254);">
+                <li class="layui-nav-item"><a href="" style="margin-left:-3px; "><span class="iconfont" style="margin-left:5px;">&#xe79d;</span>首页</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" id="order" ><span class="iconfont">&#xe61e;</span>预约管理</a>
+                    <dl class="layui-nav-child" id="layuinavchild" >
+                        <dd><a href="">预约挂号</a></dd>
+                        <dd><a href="">预约核酸检测</a></dd>
+                        <dd><a href="">预约体检</a></dd>
+                        <dd><a href="">医生排班</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><span class="iconfont">&#xe66e;</span>费用管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">门诊消费记录</a></dd>
+                        <dd><a href="">门诊充值记录</a></dd>
+                        <dd><a href="">住院消费记录</a></dd>
+                        <dd><a href="">住院充值记录</a></dd>
+                        <dd><a href="">退款记录</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><span class="iconfont">&#xe615;</span>医院信息</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">医生管理</a></dd>
+                        <dd><a href="">科室管理</a></dd>
+                        <dd><a href="">体检套餐</a></dd>
+                        <dd><a href="">健康百科</a></dd>
+                        <dd><a href="">医院导航</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><span class="iconfont">&#xe611;</span>系统设置</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">管理员管理</a></dd>
+                        <dd><a href="">角色管理</a></dd>
+                        <dd><a href="">职称管理</a></dd>
+                        <dd><a href="">消息公告</a></dd>
+                        <dd><a href="">修改密码</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div id="content">
+            <div class="content-wordage">
+                <div class="content-wordage-div"></div>
+                <span class="content-wordage-span">体检套餐项目</span>
+
+
+
+                <div class="content-wordage-div3"><span>删除</span></div>
+                <div class="content-wordage-div4"><span>新增套餐信息</span></div>
+            </div>
+            <div class="content-module">
+
+
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+
+                </fieldset>
+
+                <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this">体检套餐</li>
+                        <li>体检项目</li>
+                        <li>套餐类型</li>
+
+                    </ul>
+                    <div class="layui-tab-content" style="height: 100px;">
+                        <div class="layui-tab-item layui-show" style="width:1230px;height: 680px;">
+
+                            <!-- 下拉框 -->
+                            <div class="layui-btn-container" style="margin: 20px 20px;">
+                                <button class="layui-btn layui-btn-primary demo1" style="color: black;">
+                                    请选择套餐类型
+                                    <i class="layui-icon layui-icon-down layui-font-12"></i>
+                                </button>
+                            </div>
+
+
+                            <div class="content">
+                                <div class="search">
+                                    <input type="text" id="val" placeholder="请输入套餐姓名"><button id="sub">搜索</button>
+
+                                </div>
+                                <div class="show" id="shou">
+
+                                </div>
+                            </div>
+
+
+
+                            <table class="layui-hide" id="test" lay-filter="test" lay-skin="row"></table>
+
+
+
+                        </div>
+                        <div class="layui-tab-item" style="width:1230px;height: 680px;">
+                            <div class="content_con">
+                                <div class="search">
+                                    <input type="text" id="val" placeholder="请输入套餐姓名"><button id="sub">搜索</button>
+                                </div>
+                                <div class="show" id="shou">
+                                </div>
+                            </div>
+
+                            <table class="layui-hide" id="test1" lay-filter="test" lay-skin="row"></table>
+
+                        </div>
+
+                        <div class="layui-tab-item" style="width:1230px;height: 680px;">
+
+                            <table lay-skin="nob" class="layui-hide" id="test2" lay-filter="test" lay-skin="row">
+
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit"><span class="iconfont">&#xe606;</span></a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" style="background-color:#006eff ;"><span class="iconfont" style="background-color:#006eff ;">&#xe655;</span></a>
+
+    
+</script>
+
+    <script type="text/html" id="Packagestatus">
+    <!-- <a class="layui-btn layui-btn-xs" lay-event="edit">
+
+    </a> -->
+
+    <form class="layui-form" style="display: inline-block;">
+                                <div class="layui-form-item">
+                                        <input type="checkbox" name="switch" lay-skin="switch"
+                style="background-color: blue;">
+                                    </div>
+                            </form>
+
+    </script>
+
+
+    <script type="text/html" id="img_b">
+    <!-- <a class="layui-btn layui-btn-xs" lay-event="edit"></a> -->
+    <img src="../img/useravatar-.webp" alt="" style="width: 56px;height: 40px;border-radius: 50%;">
+
+    </script>
+
+
+
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+    <script src="./physical examination.js"></script>
+
+</body>
+
+</html>
